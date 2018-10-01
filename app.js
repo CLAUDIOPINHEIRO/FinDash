@@ -40,11 +40,13 @@ app.use('/api/users', users);
 app.use('/api/stocks', stocks);
 
 if ((process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'test')) {
+  console.log('Starting production server...');
   app.use(express.static(path.join(__dirname, 'client/build')));
   app.use('/*', function (req, res) {
     res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
   });
 } else {
+  console.log('Starting development server...');
   app.use('/', index);
 }
 

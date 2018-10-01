@@ -15,7 +15,6 @@ class App extends Component {
       <Router>
         <div className="App">
           <Route exact path="/" component={Home}/>
-          <Route path="/about" component={About}/>
           <Route path="/clients/:clientId" component={ClientPage}/>
           <Route path="/market" component={StockMarket}/>
         </div>
@@ -23,12 +22,5 @@ class App extends Component {
     );
   }
 }
-
-const About = () => (
-  <div>
-    <h2>About</h2>
-    <p>This is what the app is about.</p>
-  </div>
-);
 
 export default App;
