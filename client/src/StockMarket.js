@@ -1,5 +1,5 @@
 import React from 'react';
-import qs from 'query-string'
+import qs from 'querystring'
 
 import StockIndices from './StockIndices';
 import StockPanel from "./StockPanel";
